@@ -7,7 +7,7 @@ This is my maze/labyrinth school project, built as an HTML page. First, I genera
 ![image](https://github.com/user-attachments/assets/085c02c0-a96b-4161-b96f-ba1055c7ffc5)
 
 
-<h3>After Animation</h3>
+<h3>After Animation, if speed value is set on 14 or less</h3>
 
 ![image](https://github.com/user-attachments/assets/84f2639f-55f8-445e-bf3f-a5abc6bbe9c8)
 
