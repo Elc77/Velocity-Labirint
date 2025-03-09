@@ -15,4 +15,3 @@ This is my maze/labyrinth school project, built as an HTML page. First, I genera
 
 ![image](https://github.com/user-attachments/assets/5520d6c9-34e3-4b02-bdbc-0c7e88d402f5)
 
-.
