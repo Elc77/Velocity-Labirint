@@ -1,5 +1,5 @@
 # Labirint
-This is my maze/labyrinth school project, built as an HTML page. First, I generated a maze with a solvable path. Then, I converted the code to use the Canvas element and added an animation to visualize the pathfinding process. Additionally, I implemented a speed slider with 15 levels, allowing users to adjust the animation speed dynamically.
+This is my maze/labyrinth school project, built as an HTML page. First, I generated a maze with a solvable path. Then, I converted the code to use the Canvas element and added an animation to visualize the pathfinding process. Additionally, I implemented a speed slider with 15 levels, allowing users to adjust the animation speed dynamically. The brightness of the light bulb reflects on the speed value you set. 
 
 
 <h3>Before Animation</h3>
