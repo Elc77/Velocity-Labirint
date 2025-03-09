@@ -9,5 +9,6 @@ This is my maze/labyrinth school project, built as an HTML page. First, I genera
 
 <h3>After Animation</h3>
 
-![image](https://github.com/user-attachments/assets/59188ea9-cc23-4c4e-bb26-38d5c155829e)
+![image](https://github.com/user-attachments/assets/84f2639f-55f8-445e-bf3f-a5abc6bbe9c8)
+
 
