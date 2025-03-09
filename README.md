@@ -14,3 +14,5 @@ This is my maze/labyrinth school project, built as an HTML page. First, I genera
 <h3>After Animation if speed value is set on 15</h3>
 
 ![image](https://github.com/user-attachments/assets/5520d6c9-34e3-4b02-bdbc-0c7e88d402f5)
+
+.
