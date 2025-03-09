@@ -4,7 +4,8 @@ This is my maze/labyrinth school project, built as an HTML page. First, I genera
 
 <h3>Before Animation</h3>
 
-![image](https://github.com/user-attachments/assets/77c4eb24-9114-4787-a29a-4d99f10ef5ac)
+![image](https://github.com/user-attachments/assets/085c02c0-a96b-4161-b96f-ba1055c7ffc5)
+
 
 <h3>After Animation</h3>
 
