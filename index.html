@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+	<title>Velocity Rush</title>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+	<script src="js/maze.js"></script>
+
+	<script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+</head>
+
+<body>
+	<div class="all">
+		<div class="header">
+			<h1>Veloc<div id="alertImage"></div>ity Rush</h1>
+		</div>
+		<div class="main-container">
+			<div class="maze">
+				<!-- Replace SVG with Canvas -->
+				<canvas id="mazeCanvas" width="484" height="484"></canvas>
+				<canvas id="canvas" width="484" height="484"></canvas>
+			</div>
+			<div class="menu_buttons">
+				<input type="submit" value="Start">
+				<input type="submit" value="Reset">
+				
+				<div class="slider-container">
+					<label for="speedSlider">Speed:</label>
+					<input type="range" id="speedSlider" min="1" max="15" value="5">
+					<span id="speedValue">5</span>
+				</div>
+			
+			<img src="images/light-bulb.png">
+			<div class="light">
+		
+			</div>
+				
+			</div>
+		</div>
+
+	</div>
+
+	<script src="js/sweetalert.js"></script>
+</body>
+
+</html>

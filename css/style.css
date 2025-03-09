@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&family=Pixelify+Sans&family=Orbitron&family=Rajdhani&family=Black+Ops+One&family=Pirata+One&family=Creepster&family=MedievalSharp&family=Mystery+Quest&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Black Ops One', sans-serif;
+}
+ 
+body {
+    background: radial-gradient(circle, #4ea0e8, #236dc2, #1e3c72);
+    background-size: 200% 200%;
+    animation: swirlEffect 10s infinite linear;
+    /*background: radial-gradient(circle, #c2f0ff, #82cfff, #3399ff);
+    */
+    font-family: 'Black Ops One', sans-serif;
+    color: #E0E0E0; /* Light Gray for readability */
+}
+
+@keyframes swirlEffect {
+    0% { background-position: 50% 50%; }
+    50% { background-position: 40% 60%; }
+    100% { background-position: 50% 50%; }
+}
+.all{
+    height: 100%;
+    width: 100%;
+    margin: 10px 0 50px 0;
+}
+.header{
+    height:120px;
+    width: 100%;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 60px;
+    color: #FFD700; /* Gold */
+    text-shadow: 3px 3px 10px rgba(255, 215, 0, 0.8); /* Glowing effect */
+    text-align: center;
+}
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.maze {
+    display: flex;
+    justify-content: center; /* Push content to the right */
+    align-items: center; /* Keep it vertically centered */
+    width: 70vw;
+    max-width: 70vh;
+    height: 70vh;
+    position: relative;
+
+}
+canvas{
+    position: absolute;
+    right: 0;
+    background-color: transparent; /* Keep transparent for effect */
+    box-shadow: 0 0 15px rgba(93, 222, 244, 0.8);
+    width: 100%;
+    height: 100%;
+}
+.menu_buttons{
+    height: 100%;
+    width: 32%;
+    padding: 70px 0 0 20px;
+}
+input[type=submit]{
+    height: 70px;
+    width: 50%;
+    cursor: pointer;
+    display: block;
+    margin: 0 0 20px 50px;
+    font-weight: bold;
+    font-family: 'Black Ops One', sans-serif;
+    background-color: #00AEEF; 
+    color: white;
+    border: 2px solid #5DDEF4; 
+    padding: 15px 30px;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(93, 222, 244, 0.8);
+
+}
+input[type=submit]:hover {
+    background-color: #0088CC; /* Slightly Darker Blue */
+    border-color: #00FFFF; /* Neon Cyan */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
+}
+
+
+/*slider button*/
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 50px;
+    color: white;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 18px;
+}
+
+input[type="range"] {
+    width: 40%;
+    appearance: none;
+    height: 8px;
+    background: #5DDEF4;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #FFD700;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #FFEA00;
+    box-shadow: 0 0 10px rgba(255, 234, 0, 0.8);
+}
+
+
+/*sweetalert*/
+#alertImage{
+    height: 3%;
+    width: 2%;
+    left: 47%;
+    top: 4%;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+
+.menu_buttons img {
+    height: 70px;
+    padding: 20px 0 0 50px;
+    position: absolute;
+    transition: opacity 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+
+/* 🔥 Special styling when the lightbulb is broken */
+.menu_buttons img[src="images/broken-light-bulb.png"] {
+    opacity: 0.8; /* Make it slightly faded */
+    filter: grayscale(100%) contrast(1.2) brightness(0.8); /* Add a burnt-out effect */
+    transform: rotate(-5deg); /* Slight tilt for a "damaged" effect */
+}
+
+
+
+.light {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.9) 20%, rgba(255, 255, 0, 0.3) 70%, rgba(255, 255, 0, 0) 100%);
+    margin: 28px 0 0 65px;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 3px rgba(255, 255, 0, 0.4), /* Very dim at low speed */
+        0 0 6px rgba(255, 255, 0, 0.3), 
+        0 0 9px rgba(255, 255, 0, 0.2); 
+    transition: box-shadow 0.5s ease-out, background 0.5s ease-out;
+}
+
+/* Subtle flickering effect remains */
+@keyframes flicker {
+    0% { box-shadow: 0 0 3px rgba(255, 255, 0, 0.3), 0 0 7px rgba(255, 255, 0, 0.2); }
+    100% { box-shadow: 0 0 6px rgba(255, 255, 0, 0.4), 0 0 10px rgba(255, 255, 0, 0.3); }
+}
+
+@media (max-width:1100px){
+    .header{
+        height:85px;
+        width: 100%;
+        line-height: 85px;
+        margin: 0 auto;
+    }
+    
+    h1{
+        width: 100%;
+        font-size: 45px;
+    }
+
+
+    .menu_buttons{
+        height: 100%;
+        width: 25%;
+        padding: 70px 0 0 20px;
+    }
+
+    input[type=submit]{
+        height: 35px;
+        width: 50%;
+        margin: 0 0 20px 50px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+@media (max-width:1030px){
+    .header{
+        height:85px;
+        width: 100%;
+        line-height: 85px;
+        margin: 0 auto;
+    }
+    
+    h1{
+        width: 100%;
+        font-size: 45px;
+    }
+
+
+    .menu_buttons{
+        height: 100%;
+        width: 25%;
+        padding: 70px 0 0 20px;
+    }
+
+    input[type=submit]{
+        height: 35px;
+        width: 50%;
+        margin: 0 0 20px 50px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+@media (max-width:870px){
+    .header{
+        height:70px;
+        width: 100%;
+        line-height: 70px;
+        margin: 0 auto;
+    }
+    
+    h1{
+        width: 100%;
+        font-size: 40px;
+    }
+    .menu_buttons{
+        width: 22%;
+    }
+
+
+}
+
+@media (max-width:760px){
+    .header{
+        height:50px;
+        width: 100%;
+        line-height: 50px;
+        margin: 0 auto;
+    }
+    
+    h1{
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .menu_buttons{
+        height: 100%;
+        width: 17%;
+        padding: 70px 0 0 10px;
+    }
+
+    input[type=submit]{
+        height: 35px;
+        width: 60%;
+        margin: 0 0 20px 40px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 645px){
+    .header{
+        height:40px;
+        width: 100%;
+        line-height: 40px;
+        margin: 0 auto;
+    }
+    
+    h1{
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .menu_buttons{
+        height: 100%;
+        width: 25%;
+        padding: 70px 0 20px 10px;
+    }
+
+    input[type=submit]{
+        height: 35px;
+        width: 60%;
+        margin: 0 0 20px 40px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+
+    .maze {
+        width: 60vw;
+        max-width: 60vh;
+        height: 60vh;
+    
+    }
+}
+
+@media (max-height:600px){
+    .header{
+        height:80px;
+        line-height: 80px;
+    }
+    
+    h1{
+        font-size: 32px;
+    }
+
+    input[type=submit]{
+        height: 40px;
+        font-size: 16px;
+        width: 35%;
+    }
+    .menu_buttons{
+        width: 33%;
+    }
+}
+/*
+@media (max-height:2813px){
+    .header{
+        height:250px;
+        line-height: 250px;
+    }
+    
+    h1{
+        font-size: 125px;
+    }
+
+    input[type=submit]{
+        height: 105px;
+        font-size: 42px;
+    }
+    .menu_buttons{
+        width: 33.5%;
+    }
+}
+@media (max-height:1532px){
+    .header{
+        height:200px;
+        line-height: 200px;
+    }
+    
+    h1{
+        font-size: 80px;
+    }
+
+    input[type=submit]{
+        height: 84px;
+        font-size: 33px;
+        width: 40%;
+
+    }
+    .menu_buttons{
+        width: 35%;
+    }
+}
+@media (max-height:1250px){
+    .header{
+        height:170px;
+        line-height: 170px;
+    }
+    
+    h1{
+        font-size: 60px;
+    }
+
+    input[type=submit]{
+        height: 84px;
+        font-size: 33px;
+        width: 40%;
+    }
+    .menu_buttons{
+        width: 38%;
+    }
+}
+@media (max-height:980px){
+    .header{
+        height:140px;
+        line-height: 140px;
+    }
+    
+    h1{
+        font-size: 48px;
+    }
+
+    input[type=submit]{
+        height: 75px;
+        font-size: 29px;
+        width: 37%;
+    }
+    .menu_buttons{
+        width: 41%;
+    }
+}
+@media (max-height:670px){
+    .header{
+        height:110px;
+        line-height: 110px;
+    }
+    
+    h1{
+        font-size: 38px;
+    }
+
+    input[type=submit]{
+        height: 50px;
+        font-size: 22px;
+        width: 32%;
+    }
+    .menu_buttons{
+        width: 44%;
+    }
+}
+@media (max-height:430px){
+    .header{
+        height:60px;
+        line-height: 60px;
+    }
+    
+    h1{
+        font-size: 20px;
+    }
+
+    input[type=submit]{
+        height: 25px;
+        font-size: 12px;
+        width: 25%;
+    }
+    .menu_buttons{
+        width: 48%;
+    }
+}
