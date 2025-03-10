@@ -870,7 +870,7 @@ window.onload = function () {
     const lightDiv = document.querySelector('.light'); // Light effect div
     const lightBulb = document.querySelector('.menu_buttons img'); // Lightbulb image
 
-    // 🔹 Hide yellow light effect at start
+    //  Hide yellow light effect at start
     lightDiv.style.display = "none";
 
     startButton.addEventListener('click', startAnimation);
@@ -904,7 +904,7 @@ function startAnimation() {
     const lightBulb = document.querySelector('.menu_buttons img'); // Lightbulb image
     const lightDiv = document.querySelector('.light'); // Light effect div
 
-    // 🔹 Show light effect when animation starts
+    //  Show light effect when animation starts
     lightDiv.style.display = "block";
     lightBulb.src = "images/light-bulb.png"; // Reset lightbulb image
 
@@ -1012,7 +1012,7 @@ function resetAnimation() {
     speedSlider.value = 5; 
     document.getElementById("speedValue").textContent = "5";
     
-    // 🔄 Reset lightbulb and keep light effect hidden
+    //  Reset lightbulb and keep light effect hidden
     lightBulb.src = "images/light-bulb.png";
     lightDiv.style.display = "none"; 
 }
